@@ -196,7 +196,7 @@ class LastFM {
    */
 
   albumInfo (opts, cb) {
-    if (!(opts.name && opts.artistName) || !opts.id) {
+    if (!(opts.name && opts.artistName) && !opts.id) {
       return cb(new Error('Missing required params: name and artistName or id'))
     }
     const params = {
@@ -223,7 +223,7 @@ class LastFM {
   }
 
   albumTopTags (opts, cb) {
-    if (!(opts.name && opts.artistName) || !opts.id) {
+    if (!(opts.name && opts.artistName) && !opts.id) {
       return cb(new Error('Missing required params: name and artistName or id'))
     }
     const params = {
@@ -277,7 +277,7 @@ class LastFM {
   }
 
   artistInfo (opts, cb) {
-    if (!opts.name || !opts.id) {
+    if (!opts.name && !opts.id) {
       return cb(new Error('Missing required param: name or id'))
     }
     const params = {
@@ -310,7 +310,7 @@ class LastFM {
   }
 
   artistSimilar (opts, cb) {
-    if (!opts.name || !opts.id) {
+    if (!opts.name && !opts.id) {
       return cb(new Error('Missing required param: name or id'))
     }
     const params = {
@@ -324,7 +324,7 @@ class LastFM {
   }
 
   artistTopAlbums (opts, cb) {
-    if (!opts.name || !opts.id) {
+    if (!opts.name && !opts.id) {
       return cb(new Error('Missing required param: name or id'))
     }
     const params = {
@@ -344,7 +344,7 @@ class LastFM {
   }
 
   artistTopTags (opts, cb) {
-    if (!opts.name || !opts.id) {
+    if (!opts.name && !opts.id) {
       return cb(new Error('Missing required param: name or id'))
     }
     const params = {
@@ -357,7 +357,7 @@ class LastFM {
   }
 
   artistTopTracks (opts, cb) {
-    if (!opts.name || !opts.id) {
+    if (!opts.name && !opts.id) {
       return cb(new Error('Missing required param: name ot id'))
     }
     const params = {
@@ -568,7 +568,7 @@ class LastFM {
   }
 
   trackInfo (opts, cb) {
-    if (!(opts.name && opts.artistName) || !opts.id) {
+    if (!(opts.name && opts.artistName) && !opts.id) {
       return cb(new Error('Missing required params: name and artistName or id'))
     }
     const params = {
@@ -595,7 +595,7 @@ class LastFM {
   }
 
   trackSimilar (opts, cb) {
-    if (!(opts.name && opts.artistName) || !opts.id) {
+    if (!(opts.name && opts.artistName) && !opts.id) {
       return cb(new Error('Missing required params: name and artistName or id'))
     }
     const params = {
@@ -610,7 +610,7 @@ class LastFM {
   }
 
   trackTopTags (opts, cb) {
-    if (!(opts.name && opts.artistName) || !opts.id) {
+    if (!(opts.name && opts.artistName) && !opts.id) {
       return cb(new Error('Missing required params: name and artistName or id'))
     }
     const params = {
