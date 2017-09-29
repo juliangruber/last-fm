@@ -243,6 +243,7 @@ class LastFM {
     const params = {
       method: 'album.search',
       limit: opts.limit,
+      page: opts.page,
       album: opts.q
     }
     this._sendRequest(params, 'results', (err, data) => {
@@ -382,6 +383,7 @@ class LastFM {
     const params = {
       method: 'artist.search',
       limit: opts.limit,
+      page: opts.page,
       artist: opts.q
     }
     this._sendRequest(params, 'results', (err, data) => {
@@ -401,6 +403,7 @@ class LastFM {
     const params = {
       method: 'chart.getTopArtists',
       limit: opts.limit,
+      page: opts.page,
       autocorrect: 1
     }
     this._sendRequest(params, 'artists', (err, data) => {
@@ -416,6 +419,7 @@ class LastFM {
     const params = {
       method: 'chart.getTopTags',
       limit: opts.limit,
+      page: opts.page,
       autocorrect: 1
     }
     this._sendRequest(params, 'tags', cb)
@@ -425,6 +429,7 @@ class LastFM {
     const params = {
       method: 'chart.getTopTracks',
       limit: opts.limit,
+      page: opts.page,
       autocorrect: 1
     }
     this._sendRequest(params, 'tracks', (err, data) => {
@@ -448,6 +453,7 @@ class LastFM {
       method: 'geo.getTopArtists',
       country: opts.country,
       limit: opts.limit,
+      page: opts.page,
       autocorrect: 1
     }
     this._sendRequest(params, 'topartists', cb)
@@ -461,6 +467,7 @@ class LastFM {
       method: 'geo.getTopTracks',
       country: opts.country,
       limit: opts.limit,
+      page: opts.page,
       autocorrect: 1
     }
     this._sendRequest(params, 'tracks', cb)
@@ -499,6 +506,7 @@ class LastFM {
     const params = {
       method: 'tag.getTopAlbums',
       limit: opts.limit,
+      page: opts.page,
       tag: opts.tag
     }
     this._sendRequest(params, 'albums', cb)
@@ -511,6 +519,7 @@ class LastFM {
     const params = {
       method: 'tag.getTopArtists',
       limit: opts.limit,
+      page: opts.page,
       tag: opts.tag
     }
     this._sendRequest(params, 'topartists', cb)
@@ -530,6 +539,7 @@ class LastFM {
     const params = {
       method: 'tag.getTopTracks',
       limit: opts.limit,
+      page: opts.page,
       tag: opts.tag
     }
     this._sendRequest(params, 'tracks', cb)
@@ -620,6 +630,7 @@ class LastFM {
     const params = {
       method: 'track.search',
       limit: opts.limit,
+      page: opts.page,
       track: opts.q
     }
     this._sendRequest(params, 'results', (err, data) => {
